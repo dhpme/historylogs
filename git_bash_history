@@ -1,0 +1,397 @@
+id
+git --version
+cd ~
+pwd
+mkdir demo
+ls -al
+cd demo
+ls -al
+git config --global user.name "dhpme"
+git config --global user.email "dheeraj.pant@gmail.com"
+ls -al
+ls -l
+git init
+ls -al
+cd .git
+ls -al
+more config
+cd ..
+ls -al
+vi Demo1.java
+git status
+git add Demo1.java
+git status
+git commit
+git status
+history 100
+git status
+vi Demo1.java
+cd ..
+ls -al
+cd demo
+ls -al
+git staus
+git status
+vi Demo1.java
+git status
+git diff --help
+git diff Demo1.java
+history
+ls -al
+javac Demo1.java
+ls -al
+cp Demo1.java Demo2.java
+vi Demo2.java
+javac Demo1.java
+ls -l
+git ls-files
+git status
+git add .
+git status
+git commit -m "Change to Demo1 and two new files"
+git ls-files
+git status
+cd ~/demo
+ls -al
+git ls-files
+ls -al
+vi .gitignore
+ls -al
+cat .gitignore 
+javac Demo2.java
+ls -al
+git status
+git add .
+git status
+git commit -a -m "new file added"
+git ls-files
+mkdir temp
+ls -al
+vi .gitignore 
+git status
+git ls-files
+git rm Demo1.class
+git ls-files
+ls -al
+git rm --cached .gitignore
+git ls-files
+ls -al
+git status
+git commit -a -m "Removed all temp files"
+git status
+ls -al
+git ls-files
+vi .gitignore 
+git status
+history
+git log
+cd .git
+ls -al
+cd objects
+ls -l
+cd ../..
+clear
+git log -1
+git log -p -1
+git log -3
+git log --abbrev-commit
+git log -3 --pretty=format:%h
+git log
+git commit --amend -m "JIRA-1234: Changes for this JIRA to cleanup WS"
+git log
+git tag
+git tag -a vLATEST -m "Latest version"
+git tag
+git log
+git tag -a v0.1 dfb6e5e -m "Baseline version"
+git log
+git tag -a v0.2 bfc78bb -m "second version"
+git log
+git tag
+git show v0.1
+git checkout Demo1.java
+ls -tlr
+git tag
+git tag -d v0.2
+ls -al
+vi Demo2.java
+git add Demo2.java
+git status
+vi Demo2.java
+git status
+git add Demo2.java
+git status
+git commit -a -m "New changes to Demo2"
+git status
+cd ..
+ssh-keygen
+ls -al
+cat /home/dhpme/.ssh/id_rsa.pub
+vi /home/dhpme/.ssh/id_rsa.pub
+cd demo
+ls -al
+git remote -v
+git remote add neworigin git@github.com:dhpme/DemoRepo.git
+git remote -v
+git remote show neworigin
+git push neworigin master
+cd demo
+git remote show neworigin
+git fetch neworigin master
+ls -l
+vi Demo1.java 
+git branch -vv
+git branch
+git branch --set-upstream-to=neworigin/master
+git merge
+ls -ltr
+history 100
+cd ~
+ls -al
+cd demo
+ls -al
+git status
+clear
+history 100
+clear
+cd ~
+ls -al
+cde demo
+ls -al
+cd demo
+ls -al
+history 100
+cd ..
+ls -al
+mkdir demo1
+cd demo1
+ls -al
+clear
+ls -al
+git init
+ls -al
+git remote add neworigin git@github.com:dhpme/MyRepo.git
+git show remote
+git remote show
+ls -al
+git pull neworigin master
+id
+ls -al
+cd .ssh
+ls -al
+cd ../.ssh
+ls -al
+more id_rsa.pub
+cd ..
+ls -al
+cd dhpme
+ls -al
+rm -r -f demo1
+cd demo
+git remote show
+git remote show neworigin
+cd ..
+ls -al
+mkdir demo1
+ls -al
+cd demo1
+git init
+ls -al
+git remote add neworigin git@github.com:dhpme/DemoRepo.git
+git remote show
+git remote show neworigin
+git pull neworigin master
+ls -l
+git status
+git branch
+git remote show neworigin
+git log
+cd demo1
+ls -al
+cd demo1
+ls -al
+git branch
+git log
+git branch feature1
+git branch
+git branch -a
+git checkout feature1
+git branch
+git checkout master
+git checkout -b feature2
+git branch
+git checkout feature1
+git branch
+vi Demo3.java
+vi Demo3.java 
+git status
+git commit -a -m "Updated Demo3 class on feature1 branch"
+git log
+ls -l
+vi Demo2.java
+git status
+git commit -a -m "Updated Demo2 from feature1"
+git log
+ls -al
+git branch
+git checkout master
+git log -2
+git log master..feature1
+git log feature1..master
+git branch
+git merge feature1
+git log master..feature1
+git log feature1..master
+git log
+git branch -d feature2
+git branch -D feature2
+git branch -d feature1
+git log
+git branch
+vi Demo3.java
+git status
+git commit -a -m "Added new line to Demo3 from master"
+git log
+git reset --hard 0afed25
+git log
+git branch feature3
+git branch
+vi Demo3.java
+git commit -a -m "Added line 3 to Demo3 from master"
+vi Demo3.java
+git commit -a -m "Updated existing first line in Demo3 from master"
+git log
+git checkout feature3
+vi Demo3.java
+git commit -a -m "Added line 3 in Demo3 from feature3"
+vi Demo3.java
+git commit -a -m "Updated line 1 in Demo3 from feature3"
+git log
+clear
+git log master..feature3
+git log feature3..master
+git checkout master
+git merge-base master feature3
+git log -4
+git merge feature3
+git config --global merge.tool vimdiff
+git mergetool
+ls -l
+vi Demo3.java
+git status
+git commit -a -m "Resolved merge conflict in Demo3 from feature3 into master"
+git status
+ls -tlr
+git clean -f
+ls -tlr
+git log
+git log master..feature3
+git log feature3..master
+cd ~/demo1
+git branch
+git status
+vi Demo1.java
+git status
+git add Demo1.java
+git status
+vi Demo2.java
+git status
+cp Demo1.java Demo4.java
+vi Demo4.java 
+git status
+git stash -u
+git stash list
+git status
+git checkout feature3
+git status
+git stash apply --index stash@{0}
+git stash -u
+git stash list
+git status
+git checkout master
+git status
+git stash pop
+git stash list
+git stash drop stash@{0}
+git stash list
+git status
+git log
+cd ..
+ls -al
+cd demo2
+mkdir demo2
+cd demo2
+git init
+cd ../demo1
+cd -
+clear
+ls -al
+vi index.html
+git add .
+git commit -m "Added index.html"
+git log
+git checkout -b feature1
+git branch
+vi index.html
+git commit -a -m "Added line 2 to index from feature1"
+git log
+git log master..feature1
+git log feature1..master
+git checkout master
+vi index.html 
+git commit -m "Added line to index page from master"
+vi index2.html
+git add index2.html 
+git commit -m "Added index2 from master"
+git log feature1..master
+git status
+git commit -a -m "Added line to index page from master"
+git status
+git log feature1..master
+git checkout feature1
+git rebase master
+vi index.html
+git status
+git add index.html 
+git status
+git rebase --continue
+git log
+history
+ls -l
+vi index.html
+git log
+git checkout master
+clear
+git log
+git revert HEAD
+git log
+vi index.html 
+cd demo2
+ls -al
+cd demo2
+ls -al
+git log
+git reset 2adfbb
+git log
+git status
+ls -al
+vi index2.html 
+vi index.html 
+git reset --hard 6d9bb5
+git log
+ls -l
+git status
+vi index.html 
+got commit -a -m "added line 2"
+git commit -a -m "added line 2"
+vi index.html 
+git commit -a -m "added line 3"
+git log
+git reset --soft 6d9bb5b
+git log
+git status
+vi index.html 
+git status
+cd ../demo1
+ls -al
+cd ..
