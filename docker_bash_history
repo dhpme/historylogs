@@ -1,0 +1,108 @@
+  105  apt-get update
+  106  apt-get install apt-transport-https ca-certificates curl software-properties-common
+  107  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+  108  apt-key fingerprint 0EBFCD88
+  109  add-apt-repository  "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+  110   $(lsb_release -cs) \
+  111   stable"
+  112  apt-get update
+  113  history
+  114  apt-get install docker-ce
+  115  docker --version
+  116  systemctl start docker
+  117  systemctl enable docker
+  118  service docker status
+  119  history
+  120  docker images
+  121  docker help
+  122  docker save --help
+  123  docker images
+  124  docker search hello
+  125  docker pull hello-world
+  126  docker images
+  127  docker run hello-world
+  128  docker ps
+  129  docker ps -a
+  130  history
+  131  docker images
+  132  docker ps
+  133  docker kill e3cb5fba5da3
+  134  docker ps
+  135  docker run hello-world
+  136  ps -ef|grep jenkins
+  137  docker ps
+  138  docker run -d ubuntu
+  139  docker ps
+  140  docker ps -a
+  141  docker run -d ubuntu sleep 15
+  142  docker ps
+  143  docker ps -a
+  144  history
+  145  docker ps -a
+  146  docker run -d --name=myubuntucont_1 hello-world:latest
+  147  docker ps -a
+  148  docker images
+  149  docker rm -f cf48ba97dd93 d031034d84c2 cc2f0b64935c dc5afdd60395
+  150  docker ps -a
+  151  clear
+  152  docker run -i ubuntu
+  153  docker ps
+  154  docker ps -a
+  155  docker run -t ubuntu
+  156  hostname -i
+  157  docker ps
+  158  docker run -it --name "ubuntu_withitopt" ubuntu
+  159  docker ps
+  160  docker run -itd ubuntu
+  161  docker ps
+  162  docker attach cba12387ae0b
+  163  docker ps
+  164  docker exec -it cba12387ae0b /bin/bash
+  165  docker ps
+  166  docker stop cba12387ae0b
+  167  docker ps
+  168  docker images
+  169  docker ps
+  170  docker run -p 20000:8080 -itd tomcat
+  171  netstat -tulnp|grep 20000
+  172  docker ps
+  173  docker ps -a
+  174  docker ps
+  175  docker run -p 20001:8080 -itd tomcat
+  176  docker ps
+  177  docker inspect d5fb2dd95012
+  178  docker ps
+  179  docker rm -f d5fb2dd95012
+  180  docker ps
+  181  mkdir -p /dockershared
+  182  cd /dockershared
+  183  ls -al
+  184  history
+  185  docker run -it -v "$PWD":/edureka ubuntu /bin/bash
+  186  hostname -i
+  187  ls -l
+  188  echo "This is a file created on the host" > fromhost.txt
+  189  ls -al
+  190  docker ps
+  191  docker ps -a
+  192  docker start 92f8819918f0
+  193  docker ps
+  194  docker attach 92f8819918f0
+  195  docker run -d --name testingcopycmd ubuntu sleep 360
+  196  docker exec -it testingcopycmd /bin/bash
+  197  docker cp testingcopycmd:/root/fromcontainer.txt .
+  198  ls -tlr
+  199  more fromcontainer.txt
+  200  touch newhostfile
+  201  docker cp newhostfile testingcopycmd:/root/newhostfile
+  202  docker exec -it testingcopycmd /bin/bash
+  203  vi Dockerfile_myvimubuntu
+  204  docker build -f Dockerfile_myvimubuntu -t dhpme/myvimubuntu:1.0 .
+  205  docker images
+  206  docker run -itd --name myvimubuntu_cont dhpme/myvimubuntu:1.0
+  207  docker ps
+  208  docker attach 1036f4c8838a
+  209  docker run -itd ubuntu
+  210  docker ps
+  211  docker attach 77b0d5c3a3e3
+  212  more Dockerfile_myvimubuntu
